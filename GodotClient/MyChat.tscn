@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=3 uid="uid://dy14vlevi4nww"]
+
+[ext_resource type="Script" path="res://MyChat.gd" id="1_7klw7"]
+
+[node name="Mychat" type="Node2D"]
+script = ExtResource("1_7klw7")
+
+[node name="Chat" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit" type="LineEdit" parent="Chat"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 388.0
+offset_right = 629.0
+offset_bottom = 419.0
+
+[node name="TextEdit" type="TextEdit" parent="Chat"]
+layout_mode = 0
+offset_right = 707.0
+offset_bottom = 384.0
+editable = false
+
+[node name="SendMessage" type="Button" parent="Chat"]
+layout_mode = 0
+offset_left = 634.0
+offset_top = 382.0
+offset_right = 716.0
+offset_bottom = 434.0
+text = "OK
+"
+
+[node name="login" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -6.0
+offset_right = 1150.0
+offset_bottom = 644.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="login"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -39.0
+offset_right = 150.0
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="username" type="LineEdit" parent="login/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "username"
+
+[node name="senha" type="LineEdit" parent="login/VBoxContainer"]
+layout_mode = 2
+placeholder_text = "Senha"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="login/VBoxContainer"]
+layout_mode = 2
+
+[node name="login" type="Button" parent="login/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "login"
+
+[node name="register" type="Button" parent="login/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "register"
+
+[connection signal="pressed" from="Chat/SendMessage" to="." method="_on_send_message_pressed"]
+[connection signal="pressed" from="login/VBoxContainer/HBoxContainer/login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="login/VBoxContainer/HBoxContainer/register" to="." method="_on_register_pressed"]
