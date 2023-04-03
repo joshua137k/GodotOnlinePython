@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="MultiplayerMMOwithChat"
-run/main_scene="res://main.tscn"
+run/main_scene="res://login.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+WebsocketClient="*res://websocket_client.gd"
+Global="*res://Global.gd"
 
 [input]
 

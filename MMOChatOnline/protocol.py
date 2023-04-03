@@ -96,7 +96,7 @@ class MyServerProtocol(WebSocketServerProtocol):
         if user and not(islogged):
             self.username = username
             print("User '{}' logged in".format(username))
-            pay={"type":"id","id":str(self.id)}
+            pay={"type":"Logged","id":str(self.id)}
             payload=json.dumps(pay).encode('utf8')
             self.sendMessage(payload,isBinary=False)
 

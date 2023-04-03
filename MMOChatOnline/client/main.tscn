@@ -47,59 +47,6 @@ offset_bottom = 49.0
 grow_horizontal = 0
 text = "Close"
 
-[node name="login" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 1150.0
-offset_bottom = 650.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="login"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -180.0
-offset_top = -39.0
-offset_right = 150.0
-offset_bottom = 39.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="username" type="LineEdit" parent="login/VBoxContainer"]
-layout_mode = 2
-placeholder_text = "username"
-
-[node name="senha" type="LineEdit" parent="login/VBoxContainer"]
-layout_mode = 2
-placeholder_text = "Senha"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="login/VBoxContainer"]
-layout_mode = 2
-
-[node name="login" type="Button" parent="login/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "login"
-
-[node name="register" type="Button" parent="login/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "register"
-
-[node name="Label" type="Label" parent="login"]
-layout_mode = 0
-offset_left = 395.0
-offset_top = 117.0
-offset_right = 710.0
-offset_bottom = 261.0
-
 [node name="OpenChat" type="Button" parent="."]
 visible = false
 z_index = 1
@@ -109,6 +56,4 @@ text = "Chat"
 
 [connection signal="pressed" from="Chat/SendMessage" to="." method="_on_send_message_pressed"]
 [connection signal="pressed" from="Chat/Close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="login/VBoxContainer/HBoxContainer/login" to="." method="_on_login_pressed"]
-[connection signal="pressed" from="login/VBoxContainer/HBoxContainer/register" to="." method="_on_register_pressed"]
 [connection signal="pressed" from="OpenChat" to="." method="_on_open_chat_pressed"]
