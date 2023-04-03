@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctp0r01rftm3a"]
+
+[ext_resource type="Texture2D" uid="uid://bokqxqkxr105h" path="res://icon.svg" id="2_urjqd"]
+
+[node name="peer" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture = ExtResource("2_urjqd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -89.0
+offset_top = -95.0
+offset_right = 93.0
+offset_bottom = -67.0
+text = "NAME"
+horizontal_alignment = 1
