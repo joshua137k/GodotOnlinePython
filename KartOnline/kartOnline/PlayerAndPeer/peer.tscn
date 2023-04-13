@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cryf61ibmytpa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oekj5"]
+albedo_color = Color(0.619608, 0.584314, 0.254902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q3bb8"]
+size = Vector3(1.4, 0.6, 2.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1kbsc"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a3f07"]
+top_radius = 0.4
+bottom_radius = 0.4
+height = 0.25
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ibkj"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="peer" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_oekj5")
+mesh = SubResource("BoxMesh_q3bb8")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.960518, -0.0174518, 0.874263)
+material_override = SubResource("StandardMaterial3D_1kbsc")
+mesh = SubResource("CylinderMesh_a3f07")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.02976, -0.0174518, 0.874263)
+material_override = SubResource("StandardMaterial3D_1ibkj")
+mesh = SubResource("CylinderMesh_a3f07")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.960518, -0.0174518, -0.815265)
+material_override = SubResource("StandardMaterial3D_1ibkj")
+mesh = SubResource("CylinderMesh_a3f07")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -1.02976, -0.0174518, -0.815265)
+material_override = SubResource("StandardMaterial3D_1ibkj")
+mesh = SubResource("CylinderMesh_a3f07")
+skeleton = NodePath("")
+
+[node name="Label" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98349, 0)
+visible = false
+text = "oi"
