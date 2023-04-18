@@ -80,7 +80,7 @@ class MyServerFactory(WebSocketServerFactory):
 
 
 if __name__ == '__main__':
-    factory = MyServerFactory("ws://7.tcp.eu.ngrok.io:10836")
+    factory = MyServerFactory("ws://localhost:9000")
     asyncio.get_event_loop().run_until_complete(asyncio.gather(
         asyncio.get_event_loop().create_server(factory, '0.0.0.0', 9000),
     ))
